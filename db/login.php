@@ -14,6 +14,11 @@ $query = "SELECT users.roleid, roles.description AS role FROM users JOIN roles O
 $result = $connection->prepare($query);
 $result->execute();
 
+if (!$query) {
+    echo "\nPDO::errorInfo():\n";
+    print_r($connection->errorInfo());
+}
+
 if ($result->rowCount() >= 1) {
     $data = $result->fetchAll(PDO::FETCH_ASSOC);
     $_SESSION["s_username"] = $username;
