@@ -4,7 +4,7 @@ class Connection
 {
     public static function Connect()
     {
-        define('server', 'eu-cdbr-west-02.cleardb.net');
+        define('server', 'eu-cdbr-west-01.cleardb.net');
         define('db', 'crowdfunding');
         define('username', 'b2f98f70fdf170');
         define('password', '51daa4fe1e2b6ea ');
