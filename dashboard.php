@@ -25,7 +25,9 @@
             ?>
             <div class="card text-center">
                 <div class="card">
-                    <img src="TempImages/<?php echo $row[3]; ?>" class="m-0" alt="..." height="200" width="342">
+                    //test
+                    <a href="#" class="btn btn-primary"><img src="TempImages/<?php echo $row[3]; ?>" class="m-0" alt="..." height="200" width="342"></a>
+                    //<img src="TempImages/<?php echo $row[3]; ?>" class="m-0" alt="..." height="200" width="342">
                     <div class="card-body">
                         <h5 class="card-title"><?php echo $row[0] . " " . $row[1]; ?></h5>
                         <p class="card-text">
