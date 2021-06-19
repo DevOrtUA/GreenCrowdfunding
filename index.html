@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>Elaborato Ortiz Ulises Crowdy</title>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script src="jquery/jquery-3.6.0.min.js"></script>
+    <script type = "text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+    <link href="styles.css" rel="stylesheet">
+    <!-- Font Awesome 5.14 CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <script type="text/javascript">
+
+        window.onload =  function(){
+            NavCrowdfunding();
+            BannerDatiCrowdfunding();
+        }
+        function ListaProgetti() {
+            $.ajax({
+                url: "db/listaprogetti.php",
+                type: "GET",
+                dataType: "html",
+                success: function (html) {
+                    $("#progetti").html(html);
+                }
+            });
+        }
+        function BannerDatiCrowdfunding() {
+            $.ajax({
+                url: "views/banner.php",
+                type: "GET",
+                dataType: "html",
+                success: function (html) {
+                    $("#home").html(html);
+                }
+            });
+        }
+
+        function NavCrowdfunding() {
+            $.ajax({
+                url: "views/nav.php",
+                type: "GET",
+                dataType: "html",
+                success: function (html) {
+                    $("#navbarNav").html(html);
+                }
+            });
+        }
+
+    </script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg">
+    <a class="navbar-brand" href="index.html">Crowdfunding</a>
+    <button class="navbar-toggler menu-toggle" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    <div class="navbar-collapse justify-content-end collapse show" id="navbarNav">
+    </div>
+</nav>
+
+<!-- Banner Section -->
+<section class="banner_section" id="home"></section>
+<!-- Banner Section End -->
+<section class="hero py-4" id=progetti>
+
+</section>
+
+
+</body>
+</html>

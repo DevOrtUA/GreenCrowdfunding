@@ -4,10 +4,10 @@ class connection
 {
     public static function Connect()
     {
-        define('server', 'eu-cdbr-west-01.cleardb.net');
-        define('db', 'heroku_3bdf0e5b7aa1dbf');
-        define('username', 'b2f98f70fdf170');
-        define('password', '51daa4fe1e2b6ea');
+        define('server', 'localhost');
+        define('db', 'crowdfundingv2');
+        define('username', 'root');
+        define('password', '');
         $options = array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8');
         try {
             $connection = new PDO("mysql:host=" . server . ";dbname=" . db, username, password, $options);
